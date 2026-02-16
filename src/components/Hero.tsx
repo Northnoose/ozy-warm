@@ -1,4 +1,6 @@
 import { Container } from "@/components/Container";
+import Image from "next/image";
+import heroImg from "@/app/ozi-chairs.jpg";
 
 export const Hero = () => {
   return (
@@ -33,13 +35,12 @@ export const Hero = () => {
 
         {/* Hero image placeholder */}
         <div className="flex items-center justify-center w-full lg:w-1/2 mt-10 lg:mt-0">
-          <div
-            className="w-full max-w-md h-80 lg:h-[420px] rounded-2xl bg-[#E8E0D4] flex items-center justify-center"
-            aria-label="Hero-bilde plassholder">
-            <span className="text-[#A89880] text-xl font-medium tracking-widest uppercase">
-              Hero Image
-            </span>
-          </div>
+          <Image
+            src={heroImg}
+            alt="Ozi Frisør salong"
+            className="w-full max-w-md h-80 lg:h-[420px] rounded-2xl object-cover"
+            priority
+          />
         </div>
       </Container>
     </section>
